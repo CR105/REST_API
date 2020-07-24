@@ -76,7 +76,7 @@ def zipingResults(path, zipfilename):
 
 def report(data, event, endP, pathResource, pathExe, elapse):
   try:
-    fileWord = open(pathResource + 'testDoc.docx', 'rb')
+    fileWord = open(pathResource + 'templateTestDocument.docx', 'rb')
     document = Document(fileWord)
     tablesInDoc = document.tables
 
@@ -104,7 +104,7 @@ def report(data, event, endP, pathResource, pathExe, elapse):
         tablesInDoc[2].cell(idx + 1,2).text = str(endP[idx][1])
         tablesInDoc[2].cell(idx + 1,3).text = 'PASSED' if event[idx] else 'FAILED'
     
-    document.save(pathExe + slash + 'testName_edit.docx')
+    document.save(pathExe + slash +  str(data["report"]["title"]).replace(' ', '_') + '.docx')
 
   except (RuntimeError, TypeError, NameError):
     print("\nRuntime Error:", RuntimeError)

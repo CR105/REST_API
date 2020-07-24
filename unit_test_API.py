@@ -6,7 +6,6 @@ import requestAPI
 from datetime import datetime
 from collections import Counter
 from docx import Document
-from concurrencytest import ConcurrentTestSuite, fork_for_tests
 
 event = []
 endP = []
@@ -30,6 +29,7 @@ class API_test(unittest.TestCase):
         requestAPI.zipingResults(cls.pathExe, 'Result.zip')
         requestAPI.report(cls.data, event, endP, pathResource, cls.pathExe, str(datetime.today() - cls.startTime))
         
+    @unittest.skip("reason for skipping")
     def test_serch(self):  
         jData = self.__class__.data
         my_token = self.__class__.token
@@ -95,7 +95,7 @@ class API_test(unittest.TestCase):
         endP.append(["curp_validate", rc])
         self.assertTrue(test)
 
-    @unittest.skip("reason for skipping")
+    # @unittest.skip("reason for skipping")
     def test_curp_compare(self):  
         jData = self.__class__.data
         my_token = self.__class__.token
@@ -106,7 +106,7 @@ class API_test(unittest.TestCase):
         endP.append(["curp_compare", rc])
         self.assertTrue(test)
 
-    @unittest.skip("reason for skipping")
+    # @unittest.skip("reason for skipping")
     def test_curp_search(self):  
         jData = self.__class__.data
         my_token = self.__class__.token
@@ -154,5 +154,4 @@ class API_test(unittest.TestCase):
 
 runner = unittest.TextTestRunner()
 suite = unittest.TestLoader().loadTestsFromTestCase(API_test)
-concurrent_suite = ConcurrentTestSuite(suite, fork_for_tests(4))
-runner.run(concurrent_suite)
+runner.run(suite)
