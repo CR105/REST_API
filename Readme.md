@@ -5,7 +5,11 @@ Yo need install:
 - python-docx
 - virtualenv
 
-Can you use the following comman:
+Install virtualenv and configure the virtual environment
+>pip install virtualenv
+
+
+Afther install and creat new venv, you can use the following comman to install some dependencies:
 >pip install requests python-docx
 
 For more information visit:
