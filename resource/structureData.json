@@ -1,0 +1,20 @@
+{
+    "host": "https://yourhots.com",
+    "endPoints" : {
+        "nameEndpoint": "/value/endpoint"
+    },
+    "headers": {
+        "headers.myheader": "value"
+    },
+    "body":{
+        "nameEndpoint": {
+            "keys body": "values body"
+        }
+    },
+    "report":{
+        "title":"name of report",
+        "author": "Author name",
+        "phase": "number of phase or cycle"
+    }
+
+}
