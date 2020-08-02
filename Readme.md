@@ -1,4 +1,6 @@
 # REST API with Python
+This is a little proyect to test APIs using **python requests** and **unittest** modules.
+
 
 Yo need install:
 - requests
@@ -15,3 +17,4 @@ Afther install and creat new venv, you can use the following comman to install s
 For more information visit:
 - Requests documentation [requests](https://requests.readthedocs.io/en/master/)
 - Python-docx documentation [python-docx](https://python-docx.readthedocs.io/en/latest/)
+ 
