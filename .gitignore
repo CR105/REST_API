@@ -1,0 +1,7 @@
+# Ignore dir
+__pycache__/
+evidence/
+
+# Ignore files
+resource/data.json
+resource/datapool.csv
